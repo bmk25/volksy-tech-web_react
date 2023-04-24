@@ -1,13 +1,16 @@
-.Notifications{
-    border: 2px solid #E0003C;
-    border-style: dashed;
-    padding: 10px;
+:root {
+	--primar-color: #E11D3F;
 }
 
-ul li[data-priority='default'] {
-    color: blue;
-  }
-  
-  ul li[data-priority='urgent'] {
-    color: red;
-  }
+.Notifications {
+	border: 1px solid var(--primar-color);
+	padding: 1rem;
+}
+
+[data-priority="default"] {
+	color: blue;
+}
+
+[data-priority="urgent"] {
+	color: red;
+}

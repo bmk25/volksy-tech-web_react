@@ -1,5 +1,8 @@
-.Notifications{
-    border: 2px solid #E0003C;
-    border-style: dashed;
-    padding: 10px;
+:root {
+	--primar-color: #E11D3F;
+}
+
+.Notifications {
+	border: 1px solid var(--primar-color);
+	padding: 1rem;
 }

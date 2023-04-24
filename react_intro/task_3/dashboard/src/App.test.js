@@ -1,24 +1,25 @@
-import { shallow } from "enzyme";
-import App from "./App";
+import { shallow } from 'enzyme';
+import App from './App';
 
-describe("<App />", () => {
-  it("Test nº1 Renders without crashing", () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper.exists());
-  });
-  it("Test nº2 Renders App-header", () => {
-    const wrapper = shallow(<App />);
-    wrapper.update();
-    expect(wrapper.find("div.App-header")).toHaveLength(1);
-  });
-  it("Test nº3 Renders App-body", () => {
-    const wrapper = shallow(<App />);
-    wrapper.update();
-    expect(wrapper.find("div.App-body")).toHaveLength(1);
-  });
-  it("Test nº4 Renders App-footer", () => {
-    const wrapper = shallow(<App />);
-    wrapper.update();
-    expect(wrapper.find("div.App-footer")).toHaveLength(1);
-  });
+
+describe('<App />', () => {
+	it('Tests that App renders without crashing', () => {
+		const wrapper = shallow(<App />);
+		expect(wrapper.exists()).toBe(true);
+	})
+
+	it('Tests that App renders a <div> with class "App-header"', () => {
+		const wrapper = shallow(<App />);
+		expect(wrapper.find('.App-header').length).toBe(1);
+	})
+
+	it('Tests that App renders a <div> with class "App-body"', () => {
+		const wrapper = shallow(<App />);
+		expect(wrapper.find('.App-body').length).toBe(1);
+	})
+
+	it('Tests that App renders a <div> with class "App-footer"', () => {
+		const wrapper = shallow(<App />);
+		expect(wrapper.find('.App-footer').length).toBe(1);
+	})
 });
